@@ -18,7 +18,7 @@ export default function FeaturedDesigns() {
 
   useEffect(() => {
     api
-      .get("/designs")
+      .get("/api/designs")
       .then((res) => {
         const featured = (res.data as Design[]).filter((d) => d.isFeatured);
         setDesigns(featured.slice(0, 6));

@@ -70,8 +70,8 @@ export default function DesignsPage() {
     const fetchData = async () => {
       try {
         const [designsRes, categoriesRes] = await Promise.all([
-          api.get("/designs"),
-          api.get("/categories"),
+          api.get("/api/designs"),
+          api.get("/api/categories"),
         ]);
         if (designsRes.data?.length > 0) setDesigns(designsRes.data);
         if (categoriesRes.data?.length > 0) setCategories(categoriesRes.data);
